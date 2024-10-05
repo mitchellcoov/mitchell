@@ -1,101 +1,59 @@
-import Image from "next/image";
+'use client'
+
+import React from 'react';
+
+import Image from 'next/image';
+
+import Title from './components/Title';
+import EmblaCarousel, { ImageDetails } from "./components/emblaCarousel";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    const personal: ImageDetails[] = [
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+        { style: "", src: "/about/wedding.jpg", alt: "Mitchell and partner Mable ", width: 300, height: 300 },
+        { style: "", src: "/about/blue.jpg", alt: "Mitchell's dog Blue, a large black dog with beige snout and eyebrows", width: 300, height: 300 },
+        { style: "", src: "/about/turbo.jpg", alt: "", width: 300, height: 300 },
+        { style: "", src: "/about/wrigley.jpg", alt: "", width: 300, height: 300 },
+        { style: "", src: "/about/oliver.jpg", alt: "", width: 300, height: 300 },
+    ]
+
+    return (
+        <>
+            <Title text="welcome! i'm mitchell." />
+
+            <h3 className="text-5xl text-secondary ml-24 mb-8" >(he/him)</h3>
+            <Image className="float-left ml-20 mr-8 p-2 bg-auto bg-secondary rounded-md"
+                src="/about/profile_picture.jpg"
+                alt="Picture of Mitchell Coovert. He is wearing a white floral dress shirt, and standing in front of atree of off white flowers. "
+                width={250} height={250} />
+
+            <p className="paragraph">
+                i am a professional software developer with nearly 10 years of experience primarily in backend web development. 
+                most of my experience is with java, but i have dabbled in various other languages over the years. 
+                among the languages I've worked with are: go, python, typescript, and sql. despite my focus on java, 
+                i do love to learn and experience new languages and technologies. 
+                software development is the perfect fit for me because it allows me to combine my want to be creative with, the ability to continously learn in
+                an ever evolving technological landscape. 
+            </p>
+            
+            <p className="paragraph">
+                i am a fierce supporter of marginalized communities. my partner, mable, is a social work student at the university of windsor 
+                and part of multiple marginalized communities, so I try to support them however i can. i am passionate about justice and equality for the groups who are oppressed. 
+                one of my favourite hobbies is reading, particularly books to educate myself on the current world climate and culture.                 
+            </p>
+
+            <p className="paragraph">
+                on a more personal note, i live in windsor, ontario. mable and i have been married since july 2023 and together we have three cats -wrigley, oliver, turbo - and one pup, blue. 
+            </p>
+
+            <div className="flex place-content-center">
+                <EmblaCarousel details={personal} />
+            </div>
+            
+
+            <p className="paragraph mb-24">
+                hopefully, my website has helped you learn something about me. thanks for visiting! 
+            </p>
+        </>
+    );
 }
