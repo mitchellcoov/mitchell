@@ -4,16 +4,17 @@ import { promises as fs } from "fs"
 import { notFound } from "next/navigation";
 import BlogPostTypeComponent from "@/app/components/BlogPostType";
 
-interface BlogPostMetadata {
+export interface BlogPostMetadata {
     slug: string,
     title: string,
-    timestamp: any,
+    timestamp: string,
     description: string,
     content: string,
     type: string,
 }
 
-async function BlogPost({ params }: any) {
+
+export default async function BlogPost({params}: {params: {slug: string}}) {
     const file = await fs.readFile(process.cwd() + '/src/app/blog/posts/blog-posts-2024.json', 'utf8');
     const data = JSON.parse(file);
 
@@ -37,6 +38,3 @@ async function BlogPost({ params }: any) {
         </div>
     );
 }
-
-export type { BlogPostMetadata };
-export default BlogPost;

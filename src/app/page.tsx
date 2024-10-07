@@ -30,7 +30,7 @@ export default function Home() {
             <p className="paragraph">
                 i am a professional software developer with nearly 10 years of experience primarily in backend web development. 
                 most of my experience is with java, but i have dabbled in various other languages over the years. 
-                among the languages I've worked with are: go, python, typescript, and sql. despite my focus on java, 
+                among the languages I&apos;ve worked with are: go, python, typescript, and sql. despite my focus on java, 
                 i do love to learn and experience new languages and technologies. 
                 software development is the perfect fit for me because it allows me to combine my want to be creative with, the ability to continously learn in
                 an ever evolving technological landscape. 

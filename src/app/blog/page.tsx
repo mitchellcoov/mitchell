@@ -50,7 +50,12 @@ export default async function Blog() {
     );
 }
 
-function ContentPreview(props: any) {
+interface ContentPreview {
+    content: string
+    slug: string
+}
+
+function ContentPreview(props: ContentPreview) {
     const {content, slug} = props;
 
     if (content === undefined || content === "") {

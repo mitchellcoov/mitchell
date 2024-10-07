@@ -23,7 +23,7 @@ interface TypeProp {
 
 function BlogPostTypeComponent({propType}: TypeProp) {
 
-    let type: BlogPostType | undefined = types.find((blogPostType) => blogPostType.type === propType)
+    const type: BlogPostType | undefined = types.find((blogPostType) => blogPostType.type === propType)
     
 
     if (type === undefined) {

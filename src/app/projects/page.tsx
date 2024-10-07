@@ -67,7 +67,7 @@ export default function Projects() {
 
 
             <p className="paragraph">
-                i was part of a small team of developers who worked on the sap help portal website, serving documentation for sap's
+                i was part of a small team of developers who worked on the sap help portal website, serving documentation for sap&apos;s
                 large catalog of products. i spent eight years on the same team and my responsibilities shifted over the course of that time.
                 i started as an intern, working on mostly performance testing. after the internship ended i would then work on features and
                 bug fixes but i my responsibility was more devops focused, working with Jenkins and GitHub Actions. my responsibilities shifted again
@@ -110,17 +110,17 @@ export default function Projects() {
             </div>
 
             <p className="paragraph">
-                this site is a small project i decided to take on to get some more experience with some tech that i don't know very well.
-                it also helped stave off boredom while being out of work. i created it using react (typescript), nextjs, and tailwindcss, all of which i've never worked with before.
-                in general i'm not overly familiar with frontend development but this was a fun experience. react has been great to work with.
-                the last frontend framework i tried to pick up was angular but i didn't enjoy it and found it unintuitive, unlike react. using typescript was also an improvement over javascript.
+                this site is a small project i decided to take on to get some more experience with some tech that i don&apos;t know very well.
+                it also helped stave off boredom while being out of work. i created it using react (typescript), nextjs, and tailwindcss, all of which i&apos;ve never worked with before.
+                in general i&apos;m not overly familiar with frontend development but this was a fun experience. react has been great to work with.
+                the last frontend framework i tried to pick up was angular but i didn&apos;t enjoy it and found it unintuitive, unlike react. using typescript was also an improvement over javascript.
                 i much prefer a statically typed language to a dynamically typed one.
-                also i'm not a designer but i'm pretty happy with how it's turned out. i got some inspiration from a few designs i saw on the <a className="text-secondary" href="https://webflow.com/blog">webflow blog</a> but didn't use any specific templates.
+                also i&apos;m not a designer but i&apos;m pretty happy with how it&apos;s turned out. i got some inspiration from a few designs i saw on the <a className="text-secondary" href="https://webflow.com/blog">webflow blog</a> but didn&apos;t use any specific templates.
             </p>
 
             <p className="paragraph">
-                i've had a personal site before but i let it become out of date and then took it down. this one is objectively better in every way seeing as i've got a lot more experience under my belt.
-                as of now my wife's portion of the site is unfinished but i think it should be up shortly. the next steps for this 
+                i&apos;ve had a personal site before but i let it become out of date and then took it down. this one is objectively better in every way seeing as i&apos;ve got a lot more experience under my belt.
+                as of now my wife&apos;s portion of the site is unfinished but i think it should be up shortly. the next steps for this 
                 site are to make it mobile friendly and ensure it is fully accesible.
             </p>
 
@@ -158,7 +158,7 @@ export default function Projects() {
                 this was a single term class project, that i worked on with two classmates. we created a sudoku game.
                 it was written in java and used the swing library for the gui.
                 it had a randomly generated board that was always solveable, it had multiple backgrounds and different music for each one.
-                at the time of creating it i was super proud of the work we'd and though i am proud now, i wish i could go back and do it much better.
+                at the time of creating it i was super proud of the work we&apos;d and though i am proud now, i wish i could go back and do it much better.
                 it was quite a maximalist take on sudoku, adding more features than it needed, just for the sake of doing it.
             </p>
 
