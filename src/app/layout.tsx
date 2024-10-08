@@ -31,7 +31,7 @@ export default function RootLayout({
             <body className={`${montserrat.variable} antialiased flex flex-col h-screen justify-between`}>
                 <header className="header grid grid-cols-header">
                     <nav className="col-span-1" >
-                        <Link className="header-link" href="http://localhost:3000">coovert</Link>
+                        <Link className="header-link" href="https://coovert.ca">coovert</Link>
                     </nav>
                     <nav className="col-start-3">
                         <Link className="header-link" href="/">home</Link>
