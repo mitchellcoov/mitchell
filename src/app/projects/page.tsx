@@ -76,11 +76,11 @@ export default function Projects() {
 
             <p className="paragraph">
                 i was part of a small team of developers who worked on the sap help portal website, serving documentation for sap&apos;s
-                large catalog of products. i spent eight years on the same team and my responsibilities shifted over the course of that time.
+                extensive catalog of products. i spent eight years on the same team and my responsibilities shifted over the course of that time.
                 i started as an intern, working on mostly performance testing. after the internship ended i would then work on features and
-                bug fixes but i my responsibility was more devops focused, working with Jenkins and GitHub Actions. my responsibilities shifted again
-                and i becamse responsible for creating services on my own. i created a variety of services using varying technologies,
-                most were java spring Boot apps. i was given the opportunity to experiment and work with Go, Elasticsearch, Docker, and Kubernetes.
+                bug fixes but my main responsibilities were more devops focused, working with Jenkins and GitHub Actions. my responsibilities shifted again
+                and i becamse responsible for creating services on my own. i created a variety of rest api services using varying technologies,
+                most were java spring boot apps. i was given the opportunity to experiment and work with go, elasticsearch, docker, and kubernetes.
             </p>
 
             <p className="paragraph" >
@@ -171,10 +171,10 @@ export default function Projects() {
                 this was a single term class project, that i worked on with two classmates. we created a sudoku game.
                 it was written in java and used the swing library for the gui.
                 it had a randomly generated board that was always solveable, it had multiple backgrounds and different music for each one.
-                at the time of creating it i was super proud of the work we&apos;d and though i am proud now, i wish i could go back and do it much better.
-                it was quite a maximalist take on sudoku, adding more features than it needed, just for the sake of doing it.
+                at the time of creating it i was super proud of the work we&apos;d and though i am proud now, if i made it again i would definitely take a different approach.
+                it was quite a maximalist take on sudoku, adding more features than it needed, just for the sake of doing it. something that i didn't know 
+                at the time of making it, is that there should only be one unique solution.
             </p>
-
 
         </div>
     );

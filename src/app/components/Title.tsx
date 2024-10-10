@@ -1,20 +1,20 @@
 'use client'
 
-import { TypeAnimation } from "react-type-animation";
+import { ReactTyped } from "react-typed";
 
 interface TitleProps {
     text: string;
 }
 
 export default function Title({text} : TitleProps) {
+    console.log("Creating title: " + text);
     return (
-        <div>
-            <TypeAnimation 
-                className="text-8xl m-5 px-20 pt-10"
-                sequence={[text, 1000]}
-                wrapper='h1'
-                speed={10}
-                repeat={1}></TypeAnimation>
+        <div className="text-8xl pt-10 pb-6">
+            <ReactTyped 
+                strings={[text]}
+                startDelay={700}
+                typeSpeed={80}
+                ></ReactTyped>
         </div>
     );
 }

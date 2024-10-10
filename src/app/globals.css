@@ -91,15 +91,15 @@ body {
   }
 
   .page-description {
-    @apply text-3xl mx-5 pl-20 text-secondary;
+    @apply text-3xl text-secondary;
   }
 
   .paragraph {
-    @apply text-xl m-5 pl-20 pr-10 indent-20;
+    @apply text-xl mt-5 pr-10 indent-20;
   }
 
   .project-title {
-    @apply text-5xl m-5 mt-20 p-5 pl-20 items-end;
+    @apply text-5xl mt-20 mb-5 items-end;
   }
 
   .tech-logo {

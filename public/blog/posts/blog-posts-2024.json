@@ -1,0 +1,22 @@
+{
+    "posts": [
+        {
+            "slug": "coming-soon",
+            "title": "coming soon...",
+            "timestamp": "",
+            "description": "",
+            "content": "",
+            "type": ""
+        },
+        {
+            "slug": "man-or-mango",
+            "title": "Man or Mango",
+            "timestamp": "2024-07-22",
+            "description": "Thoughts on Man or Mango by Lucy Ellman",
+            "content": "To start off, I don't think this book is everyone's cup of tea but it is very much mine. It's kind of like, if a Wes Anderson film were a novel with . ",
+            "type": "BOOK"
+        }
+
+
+    ]
+}

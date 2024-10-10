@@ -18,6 +18,12 @@ const montserrat: NextFontWithVariable = Montserrat({
 export const metadata: Metadata = {
     title: "Home - Mitchell Coovert",
     description: "Home page for mitchell.coovert.ca",
+    icons: [
+        {rel: "icon", url: "/icons/favicon-16x16.png", type: "image/png", sizes:"16x16"},
+        {rel: "icon", url: "/icons/favicon-32x32.png", type: "image/png", sizes:"32x32"},
+        {rel: "apple-touch-icon", url: "/icons/apple-touch-icon.png", type: "image/png"},
+        {rel: "manifest", url:"/icons/site.webmanifest"}
+    ]
 };
 
 export default function RootLayout({
@@ -27,6 +33,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
+            <head>
+
+            </head>
 
             <body className={`${montserrat.variable} antialiased flex flex-col h-screen justify-between`}>
                 <header className="header grid grid-cols-header">
@@ -42,7 +51,7 @@ export default function RootLayout({
 
                 </header>
 
-                <main className="">{children}</main>
+                <main className="m-28">{children}</main>
 
                 <footer className="footer grid grid-cols-footer bottom-2 mt-auto">
 

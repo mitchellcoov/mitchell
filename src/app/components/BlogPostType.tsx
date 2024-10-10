@@ -24,7 +24,6 @@ interface TypeProp {
 function BlogPostTypeComponent({propType}: TypeProp) {
 
     const type: BlogPostType | undefined = types.find((blogPostType) => blogPostType.type === propType)
-    
 
     if (type === undefined) {
         return
@@ -32,8 +31,8 @@ function BlogPostTypeComponent({propType}: TypeProp) {
 
     return(
         <div>
-            <Image className="mx-4 hidden dark:block" src={`/blog/types/dark${type.iconPath}icon.png`} alt="" width={40} height={40}/>
-            <Image className="mx-4 dark:hidden block" src={`/blog/types/light${type.iconPath}icon.png`} alt="" width={40} height={40}/>
+            <Image className="mr-4 hidden dark:block" src={`/blog/types/dark${type.iconPath}icon.png`} alt="" width={40} height={40}/>
+            <Image className="mr-4 dark:hidden block" src={`/blog/types/light${type.iconPath}icon.png`} alt="" width={40} height={40}/>
         </div>
     )
 }
