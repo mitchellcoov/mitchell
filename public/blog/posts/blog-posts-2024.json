@@ -1,19 +1,43 @@
 {
     "posts": [
         {
-            "slug": "coming-soon",
-            "title": "coming soon...",
-            "timestamp": "",
-            "description": "",
-            "content": "",
-            "type": ""
+            "slug": "this-site-2024",
+            "title": "Developing with React, NextJS, and TailwindCSS",
+            "timestamp": "2024-10-05",
+            "description": "What is was like for me creating this website using React, NextJS, and TailwindCSS",
+            "content": "To start off, I don't think this book is everyone's cup of tea but it is very much mine. It's kind of like, if a Wes Anderson film were a novel with . ",
+            "type": "TECH"
         },
         {
-            "slug": "man-or-mango",
-            "title": "Man or Mango",
+            "slug": "blair-witch-project-1999",
+            "title": "The Blair Witch Project",
+            "timestamp": "2024-09-26",
+            "description": "Thoughts on The Blair Witch Project (1999)",
+            "content": "",
+            "type": "MOVIE"
+        }, 
+        {
+            "slug": "the-word-is-murder-2017",
+            "title": "The Word is Murder",
+            "timestamp": "2024-08-30",
+            "description": "Thoughts on The Word is Murder by Anthony Horowitz",
+            "content": "This is the second novel I've read from Anthony Horowitz",
+            "type": "BOOK"
+        },
+        {
+            "slug": "21-things-about-indian-act-2018",
+            "title": "21 Things You May Not Know About the Indian Act",
+            "timestamp": "2024-08-15",
+            "description": "Thoughts on 21 Things You May Not Know About the Indian Act by Bob Joseph",
+            "content": "a little bit of content",
+            "type": "BOOK"
+        },
+        {
+            "slug": "man-or-mango-1998",
+            "title": "Man or Mango?",
             "timestamp": "2024-07-22",
-            "description": "Thoughts on Man or Mango by Lucy Ellman",
-            "content": "To start off, I don't think this book is everyone's cup of tea but it is very much mine. It's kind of like, if a Wes Anderson film were a novel with . ",
+            "description": "Thoughts on Man or Mango? by Lucy Ellman",
+            "content": "To start off, I don't think this book is everyone's cup of tea but it is very much mine. It's kind of like, if a Wes Anderson film were a novel with .",
             "type": "BOOK"
         }
 

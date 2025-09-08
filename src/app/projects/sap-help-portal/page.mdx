@@ -1,0 +1,79 @@
+import ClickableImage from '@/app/components/ClickableImage';
+import Title from "@/app/components/Title";
+
+<div className="project">
+    <Title text={`SAP Help Portal.`} />
+
+    <section className="text-center">
+
+        <a class="project-link" href="https://help.sap.com" target="_blank">https://help.sap.com</a>
+        <br/>
+        <br/>
+        <span className="logo-span">
+            <a class="tech-logo" href="https://sap.com" target="_blank">
+                <img className="hidden dark:block" src="/logos/dark_sap_icon.png" alt="SAP logo" width="60" ></img>
+                <img className="dark:hidden block" src="/logos/light_sap_icon.png" alt="SAP logo" width="60" ></img>
+            </a>
+            <a class="tech-logo" href="https://www.java.com/en/" target="_blank">
+                <img className="hidden dark:block" src="/logos/dark_java_icon.png" alt="Java logo" width="60" ></img>
+                <img className="dark:hidden block" src="/logos/light_java_icon.png" alt="Java logo" width="60" ></img>
+            </a>
+            <a class="tech-logo" href="https://spring.io" target="_blank">
+                <img className="hidden dark:block" src="/logos/dark_spring_icon.png" alt="Spring logo" width="60" ></img>
+                <img className="dark:hidden block" src="/logos/light_spring_icon.png" alt="Spring logo" width="60"></img>
+            </a>
+            <a class="tech-logo" href="https://go.dev" target="_blank">
+                <img className="hidden dark:block" src="/logos/dark_golang_icon.png" alt="Go logo" width="60" ></img>
+                <img className="dark:hidden block" src="/logos/light_golang_icon.png" alt="Go logo" width="60" ></img>
+            </a>
+            <a class="tech-logo" href="https://www.docker.com" target="_blank">
+                <img className="hidden dark:block" src="/logos/dark_docker_icon.png" alt="SAP logo" width="60" ></img>
+                <img className="dark:hidden block" src="/logos/light_docker_icon.png" alt="SAP logo" width="60" ></img>
+            </a>
+        </span>
+
+        <br/>
+
+        <ClickableImage className="right project-picture" src="/projects/sap-help-portal/hp_home.png" alt="The SAP Help Portal homepage" width={400}/>
+
+        I was a member of a relatively small team of developers who worked on the SAP Help Portal (HP) website, serving documentation for SAP&apos;s extensive catalogue of products. I spent eight years on the team, joining before go-live, taking the site into production, and stablizing and evolving it to better fit the needs of our stakeholders. Over the course of that time my responsibilities were always shifting, and I was able to work with almost every aspect of its development.
+
+        The HP was built on SAP Business Technology Platform in a micro-service architecture, with a revolving frontend of Angular, Vue, and UI5, and a backend of mostly Java, with data storage being split between S4/HANA, Elasticsearch and S3. It serves millions of visitors every month, and millions of requests every day.
+
+        I started at SAP as an intern, completing my school&apos;s co-op requirement. I worked mostly on performance testing. We had a custom script that would test and time the main functions of the site. I also worked with LoadRunner and JMeter to a lesser extent. As with most internships, it was somewhat unremarkable, but served as a great jumping off point and at its completion I was privileged enough to be hired on as permanent employee.
+
+        <ClickableImage className="left project-picture" src="/projects/sap-help-portal/hp_product.png" alt="A product page on the SAP Help Portal." width={300}/>
+
+        As a permanent member of the team, I would then work on features and bug fixes but my main responsibilities were more devops focused, working with Jenkins and later, GitHub Actions. I was in charge of creating and maintaining build and deployment workflows, as well as the major project, highlighted later, of migrating from Jenkins to GitHub Actions. I would also handle a nummber of support tasks interfacing directly with internal stakeholders to achieve their desired goals.
+
+        Later my responsibilities shifted again, this time away from the operations and more towards development, creating services of my own. This was at a time where we were transitioning our apps to Spring Boot. I worked on and created a number of REST APIs using Spring Boot, as well as championed the implementation of the common library that would be shared between most of the applications. I was also given the opportunity to experiment and work with Go, Elasticsearch, Docker, and Kubernetes.   
+
+        <br/>
+        <br/>
+        <br/>
+
+        #### <center>Major Projects</center>
+
+        ##### _Search Updates_
+        I was tasked with refactoring, and upgrading our search application and infrastructure. Our search application was built on top of Elasticsearch clusters. Due to to the sunsetting of our existing infrastructure platform, I had to start the project with a POC to test new platform feasability and capability. With the POC settled, I was able to get started on the new setup, which included major version updates, as well as security improvements, monitoring improvements, and reduced cost by streamlining the architecture. 
+
+        The second phase of the project was to update the search application. The update included moving to a more recent version of Java, incorporating Spring Framework/Spring Boot, refactoring and removing bloat, and adding new functionality to make use of Elasticsearch&apos;s natural language processor ELSER. Adding the natural language processing to our search results was able to bring our search efficacy up from 50% to 80%. 
+
+        ##### _Security Scanning_
+        As with most software applications, security was a main concern of ours. Documents uploaded to the HP may contain their own JavaScript components. These components are a security risk because they could include external libraries. So I had to make sure that these documents were being scanned for outdated or vulnerable versions of the libraries. I created a service that would run during the upload process to send the documents off to multiple security scanning systems. 
+
+        Due to platform security protocols, the documents had to first be sent from the processing application to a Go service in another platform to do pre-processing. Once that was finished it would be sent off to the scanners. The Go application would then process all of the reports and provide them back to the original application for the user to interface with. 
+
+
+        ##### _Jenkins to GitHub Actions_
+        Every team is always looking for ways to improve efficiency and enable higher output. For us, one of the projects that helped us was moving from Jenkins to GitHub Actions. Jenkins is the more mature product offering and contains a number of plugins and integrations but in my opinion it also creates a higher barrier between development and operations. GitHub Actions I think helps bridge that gap a little better. A centralized place where developers are already going each day to view code reviews/pull requests, can now also be where they see their build statuses. It allowed greater transparency and collaboration.
+
+        The actual transition wasn&apos;t overly complex. The setup of the runner was pretty straight forward. The largest hurdle was translating Jenkins pipelines into groovy scripts but was still a relatively smooth process. 
+
+
+        I will conclude by saying I thoroughly enjoyed my time at SAP, thanks in no small part to my team and my manager. Everyone I worked with was always kind and incredibly knowdledgable.
+
+    </section>
+
+
+</div>

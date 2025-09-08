@@ -1,0 +1,70 @@
+
+import ClickableImage from '@/app/components/ClickableImage';
+import Title from "@/app/components/Title";
+
+<div className="project">
+    <Title text={`Ontario Finances.`} />
+
+    <section className="text-center">
+        <a class="project-link" href="https://ontariofinances.ca" target="_blank">https://ontariofinances.ca</a>
+        <br/>
+        <br/>
+        <span className="logo-span">
+            <a className="tech-logo" href="https://react.dev" target="_blank">
+                <img className="hidden dark:block" src="/logos/dark_react_native_icon.png" alt="React logo" width="60" />
+                <img className="dark:hidden block" src="/logos/light_react_native_icon.png" alt="React logo" width="60" />
+            </a>
+            <a className="tech-logo" href="https://www.typescriptlang.org" target="_blank">
+                <img className="hidden dark:block" src="/logos/dark_typescript_icon.png" alt="Typescript logo" width="60" />
+                <img className="dark:hidden block" src="/logos/light_typescript_icon.png" alt="Typescript logo" width="60" />
+            </a>
+            <a className="tech-logo" href="https://tailwindcss.com" target="_blank">
+                <img className="hidden dark:block" src="/logos/dark_tailwind_css_icon.png" alt="Tailwind CSS logo" width="60" />
+                <img className="dark:hidden block" src="/logos/light_tailwind_css_icon.png" alt="Tailwind CSS logo" width="60" />
+            </a>
+            <a className="tech-logo" href="https://nextjs.org" target="_blank">
+                <img className="hidden dark:block" src="/logos/dark_nextjs_icon.png" alt="NextJS logo" width="60" />
+                <img className="dark:hidden block" src="/logos/light_nextjs_icon.png" alt="NextJS logo" width="60" />
+            </a>
+            <a className="tech-logo" href="https://www.java.com/en/" target="_blank">
+                <img className="hidden dark:block" src="/logos/dark_java_icon.png" alt="Java logo" width="60" />
+                <img className="dark:hidden block" src="/logos/light_java_icon.png" alt="Java logo" width="60" />
+            </a>
+        </span>
+
+        <br/>
+
+        This has been a little passion project of mine. I try my best to keep myself informed on what is happening in both my country, Canada, as well my province, Ontario. Finances is always a topic of discussion when it comes to which party should be governing at any given time. So i wanted to have an intuitive and easy to use view of Ontario&apos;s financial history. I couldn&apos;t find an existing one, so I made it myself.
+
+        <div>
+            <span className="flex flex-col md:flex-row justify-center items-center gap-2 flex-wrap">
+                <ClickableImage className="project-picture" src="/projects/ontario-finances/e1.png" alt="Screenshot of ontariofinances.ca graph plotting total revenue and expenses over the period 2020-2024" width={350} />
+                <ClickableImage className="project-picture" src="/projects/ontario-finances/e2.png" alt="Screenshot of ontariofinances.ca graph plotting accumulated deficit, total financial assets, and total liabilities, adjusted for inflation, over the period 1995-2024" width={350} />
+                <ClickableImage className="project-picture" src="/projects/ontario-finances/e3.png" alt="Screenshot of ontariofinances.ca graph plotting total tax and other revenue, as well as each budget, over the period 2020-2024" width={350} />
+            </span>
+            <p class="caption">Current version using Recharts.</p>
+        </div>
+
+        The current frontend was created using React, NextJS, TailWindCSS, and <a class="" href="https://recharts.org/en-US" target="_blank">Recharts</a> for the chart components. The backend is Java Spring Boot application, connected to a MongoDB that contains all of the data. My first attempt was using Material UI for some components and the charts but I found that the charts were not as customizable as I needed. The backend was also made using NodeJS and Express but I found that switching it over to Java was easier for me due to familiarity even though I don&apos;t think Java is the best suited for what I&apos;m doing. 
+
+        The hardest part of this project was trying to figure out how I wanted to architect it. At first I was thinking of using a relational db because one might think that the reports would be similiar year to year, but unfortunately they aren&apos;t. So that pretty quickly went out the window and I moved on to a NoSQL db, and chose MongoDB. I&apos;d never used Mongo before and thought I might as well give it a try. It was pretty easy to setup and get going. My biggest slow down with it was deciding how to setup my collections. I settled on grouping the data into collections by the schedule in which they&apos;re found in the reports. For example, schedule 1 is revenue by source, and is broken down into taxation, transfers from the government of Canada, etc. 
+
+
+
+        The entire site is running on Docker images coordinated with Docker Compose. It&apos;s simple and easy to manage for this project. 
+
+        I will continue to add to this project as I find the time again as there are a number of things I&apos;d still like to add to it. The accessibility isn&apos;t where I would like it to be, I need to make sure it is usable by everyone. The responsiveness is improved from when I started but it could always be better. I&apos;ll open up the code on GitHub once I feel more comfortable with the state it&apos;s in. If you live in Ontario I encourage you to go check it out and see our governments spending patterns.
+
+        <br/>
+        <div>
+            <span className="flex flex-col md:flex-row justify-center items-center gap-2 flex-wrap">
+                <ClickableImage className="project-picture" src="/projects/ontario-finances/old_e1.png" alt="Screenshot of ontariofinances.ca graph plotting total revenue and expenses over the period 2020-2024" width={350} />
+                <ClickableImage className="project-picture" src="/projects/ontario-finances/old_e2.png" alt="Screenshot of ontariofinances.ca graph plotting accumulated deficit, total financial assets, and total liabilities, adjusted for inflation, over the period 1995-2024" width={350} />
+                <ClickableImage className="project-picture" src="/projects/ontario-finances/old_e3.png" alt="Screenshot of ontariofinances.ca graph plotting total tax and other revenue, as well as each budget, over the period 2020-2024" width={350} />
+            </span>
+            <p class="caption">Previous version using Material UI.</p>
+        </div>
+
+    </section>
+
+</div>

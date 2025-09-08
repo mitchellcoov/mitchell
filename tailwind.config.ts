@@ -9,9 +9,12 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                background: "var(--background)",
-                foreground: "var(--foreground)",
-                secondary: "var(--secondary)",
+                "background-primary": "var(--background-primary)",
+                "background-secondary": "var(--background-secondary)",
+                "background-tertiary": "var(--background-tertiary)",
+                "text-primary": "var(--text-primary)",
+                "text-secondary": "var(--text-secondary)",
+                "text-tertiary": "var(--text-tertiary)",
             },
 
             fontFamily: {

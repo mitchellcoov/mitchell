@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 import Title from "../components/Title";
-import BlogPostList from "../components/BlogPostList";
+// import BlogPostList from "../components/BlogPostList";
 
 export const metadata: Metadata = {
     title: "Blog - Mitchell Coovert",
@@ -12,14 +12,16 @@ export default async function Blog() {
     
 
     return (
-        <div>
-            <Title text="my blog." />
+        <div className="flex flex-col items-center mb-16 mx-10 min-h-screen">
+            <Title text="My Blog." />
 
-            <p className="page-description">
-                this is just for me to dump my general opinions, and recommendations.
-            </p>
+            <h3 className="text-center">
+                Not a critic, not a writer, just a person with thoughts.
+            </h3>
 
-            <BlogPostList />
+            {/* <BlogPostList /> */}
+
+            <h2 className="text-4xl mt-8">Coming Eventually...</h2>
             
         </div>
     );

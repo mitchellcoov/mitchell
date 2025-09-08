@@ -3,24 +3,65 @@
 @tailwind utilities;
 
 :root {
-  --background: #bddbb2;
-  --foreground: #343d31;
-  --secondary: #6a7367;
-
+  --background-primary: #dae1d8;
+  --background-secondary: #aeb4ac;
+  --background-tertiary: #875b19;
+  --text-primary: #343d31;
+  --text-secondary: #747676;
+  --text-tertiary: black;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #343d31;
-    --foreground: #bddbb2;
-    --secondary: #6a7367;
+    --background-primary: #343d31;
+    --background-secondary: #303433;
+    --background-tertiary: #B28A33;
+    --text-primary: #bddbb2;
+    --text-secondary: #6a7367;
+    --text-tertiary: white;
+
+
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--text-primary);
   font-family: var(--font-montserrat), sans-serif;
+  
+}
+
+main {
+  @apply min-h-svh pt-[8rem] md:pt-[7rem] pb-[4rem] ;
+  background: repeating-linear-gradient(-43deg, var(--background-primary), var(--background-primary) 450px, 
+    var(--background-secondary) 450px, var(--background-secondary) 900px, var(--background-primary) 900px);
+  background-attachment: fixed;
+}
+
+a {
+  @apply text-text-tertiary hover:text-background-tertiary;
+}
+
+h2 {
+  @apply text-2xl md:text-3xl lg:text-4xl transition-all;
+}
+
+h3 {
+  @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl text-text-secondary font-medium italic mb-6;
+}
+
+h4 {
+  @apply text-xl lg:text-2xl text-text-tertiary transition-all;
+}
+h5 {
+  @apply text-lg text-text-secondary text-center md:text-xl md:text-text-tertiary md:text-start;
+}
+
+#home {
+  @apply flex flex-col items-center md:min-h-screen;
+}
+
+#profile-picture {
+  @apply w-72 sm:w-96 md:w-auto;
 }
 
 @layer utilities {
@@ -32,7 +73,7 @@ body {
 @layer components {
 
   .embla {
-    @apply grid gap-6 mx-20 my-4 max-w-4xl items-center;
+    @apply flex lg:gap-6 md:mx-20 my-4 w-1/2 min-w-96 items-center justify-center;
     --slide-size: 100%;
   }
   .embla__viewport {
@@ -43,28 +84,35 @@ body {
     
   }
   .embla__slide {
-    @apply min-w-0 p-2 bg-secondary rounded-md;
+    @apply min-w-0 p-2 rounded-md;
     transform: translate3d(0, 0, 0);
     flex: 0 0 var(--slide-size);
   }
 
   .embla__button {
     @apply flex justify-center items-center 
-    appearance-none bg-transparent touch-manipulation ;
-    border: 0;
-    padding: 0;
-    margin: 0;
-    box-shadow: inset 0 0 0 0.2rem var(--secondary);
-    width: 3.6rem;
-    height: 3.6rem;
-    z-index: 1;
-    border-radius: 50%;
-    color: var(--foreground);
+    appearance-none bg-transparent touch-manipulation 
+    p-0 m-0 min-w-[3.6rem] h-[3.6rem] z-10 
+    border-0 rounded-xl text-text-primary shadow-none md:shadow-[inset_0_0_0_0.2rem_var(--text-secondary)];
+  }
 
+  .embla__button.prev {
+    @apply top-1/2 left-0;
+  }
+  .embla__button.next {
+    @apply top-1/2 right-0;
+  }
+
+  .embla__button:hover:not(:disabled) {
+    @apply md:shadow-[inset_0_0_0_0.2rem_var(--background-tertiary)];
   }
 
   .embla__button:disabled {
-    color: var(--secondary);
+    @apply text-text-secondary;
+  }
+
+  .embla__button:active:not(:disabled) {
+     @apply text-text-tertiary md:text-text-primary md:shadow-[inset_0_0_0_0.2rem_var(--text-tertiary)]
   }
 
   .embla__button__svg {
@@ -72,38 +120,144 @@ body {
     height: 35%;
   }
 
-  .footer {
-    @apply text-sm;
+  .h1 {
+    @apply text-3xl sm:text-5xl lg:text-6xl lg:min-h-20 lg:mt-8 font-semibold;
   }
 
   .header {
-    text-align: right;
+    @apply w-full h-12 lg:h-[72px] bg-background-secondary fixed items-center flex justify-center md:justify-end z-10;
+  }
+  .header-title {
+    @apply md:hidden text-xl text-center text-text-tertiary;
+  }
+  .header-burger {
+    @apply absolute md:hidden top-0 right-0 p-2 hover:cursor-pointer;
+  }
+
+  .header-list {
+    @apply h-full list-none flex flex-col text-right md:flex-row lg:justify-between;
+  }
+
+  .header-item {
+    @apply h-full items-center bg-background-secondary shadow-sm shadow-neutral-800 md:shadow-none;
   }
 
   .header-link {
-    @apply p-4 text-xl;
+    @apply block h-full p-3 lg:p-5 text-xl lg:text-2xl text-text-tertiary active:bg-background-tertiary active:md:bg-inherit; 
   }
 
   .header-link:hover {
-    color: var(--background);
-    background: var(--foreground);
+    color: var(--background-primary);
+    background: var(--background-tertiary);
     transition: all 0.5s ease 0s;
   }
 
-  .page-description {
-    @apply text-3xl text-secondary;
+  .image-frame {
+    @apply m-2 md:my-4 md:mx-6 border-8 border-background-tertiary rounded-md;
   }
 
   .paragraph {
-    @apply text-xl mt-5 pr-10 indent-20;
-  }
-
-  .project-title {
-    @apply text-5xl mt-20 mb-5 items-end;
+    @apply indent-8 m-4 md:text-justify text-sm md:text-lg;
   }
 
   .tech-logo {
-    @apply m-1;
+    @apply m-1 p-2 w-10 md:w-14;
   }
 
+  .tech-logo img.dark {
+    @apply hidden dark:block;
+  }
+  .tech-logo img.light {
+    @apply dark:hidden;
+  }
+
+  .tech-logo:hover {
+    @apply bg-background-tertiary rounded-md;
+  }
+
+  .logo-span {
+    @apply flex flex-row justify-center items-center gap-0 md:gap-2
+  }
+
+
+  .footer {
+    @apply h-24 text-sm;
+  }
+
+  .footer-element {
+    @apply my-2;
+  }
+
+
+  /* Projects */
+  .project-layout {
+    @apply flex flex-row flex-wrap justify-center gap-14 lg:gap-8 mt-10;
+  }
+
+  .project-layout a {
+    @apply lg:basis-1/3 flex;
+  }
+
+  .project-layout a:hover .image-frame {
+    @apply md:shadow-2xl;
+  }
+
+  .project-layout a:hover h2,
+  .project-layout a:hover h4 {
+    @apply md:text-background-tertiary;
+  }
+
+   .project-layout a:hover h2 {
+    @apply md:text-[2rem] lg:text-[2.3rem] xl:text-[2.5rem];
+   }
+
+  .project-layout a:hover h4 {
+    @apply md:text-[1.4rem] lg:text-[1.75rem];
+   }
+
+  .project-card {
+    @apply max-w-lg flex flex-col justify-start items-center;
+  }
+
+  .project-card:has(h2) {
+    @apply justify-center;
+  }
+
+  .project-card h2 {
+    @apply text-text-primary m-2 underline md:no-underline;
+  }
+
+  .project-card h4 {
+    @apply text-text-primary underline md:no-underline lg:m-4;
+  }
+
+  .project-card-description {
+    @apply text-base md:text-lg text-text-tertiary text-center;
+  }
+
+  .project {
+    @apply min-h-screen mx-2 md:mx-16 flex flex-col items-center;
+  }
+
+  .project img.project-picture {
+    @apply image-frame justify-self-center;
+  }
+
+  .project img.right {
+    @apply md:float-right;
+  }
+  .project img.left {
+    @apply md:float-left;
+  }
+  .project p {
+    @apply paragraph;
+  }
+
+  .project .project-link {
+    @apply text-center text-xl italic text-text-secondary hover:text-background-tertiary ;
+  }
+
+  .project .caption {
+    @apply block basis-full text-center text-text-tertiary text-sm italic;
+  }
 }

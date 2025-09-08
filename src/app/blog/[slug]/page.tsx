@@ -1,8 +1,9 @@
 'use client'
 import Title from "@/app/components/Title";
-import BlogPostTypeComponent from "@/app/components/BlogPostType";
+import BlogPostTypeComponent from "@/app/components/blog/BlogPostType";
 
-import ReactMarkdown from "react-markdown";
+import Markdown from "react-markdown";
+import rehypeRaw from 'rehype-raw'
 import { useEffect, useState } from "react";
 import { notFound } from "next/navigation";
 
@@ -56,9 +57,11 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         notFound();
     }
 
+    const title = meta.title.match(".*[\.\?\!]$") ? meta.title : meta.title + "."
+
     return (
         <div>
-            <Title text={`${meta.title}.`} />
+            <Title text={`${title}`} />
             <section className="inline-flex flex-wrap items-center" >
                 <h2 className="page-description mr-5 " >{meta.description}</h2>
                 <div className="flex flex-row my-5 items-center">
@@ -66,38 +69,10 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                     <h4 className="" >{meta.timestamp}</h4>
                 </div>
             </section>
-
-
-            <ReactMarkdown >
-                {content}
-            </ReactMarkdown>
-
+            <section className="text-xl gap-4 flex flex-col">
+                <Markdown children={content} rehypePlugins={[rehypeRaw]}/>
+            </section>
         </div>
     );
 }
 
-
-// export default async function BlogPost({params}: {params: {slug: string}}) {
-//     const file = await fs.readFile(process.cwd() + '/src/app/blog/posts/blog-posts-2024.json', 'utf8');
-//     const data = JSON.parse(file);
-
-//     const post: BlogPostMetadata | undefined = data.posts.find((post: BlogPostMetadata) => post.slug === params.slug);
-
-//     if (post === undefined) {
-//         notFound()
-//     }
-
-//     return (
-//         <div>
-//             <Title text={`${post.title}.`} />
-//             <h2 className="page-description" >{post.description}</h2>
-//             <div className="flex flex-row ml-20 m-5 pl-5 items-center">
-//                 <BlogPostTypeComponent propType={`${post.type}`} />
-//                 <h4 className="" >{post.timestamp}</h4>
-//             </div>
-
-
-//             <p className="paragraph" >{post.content}</p>
-//         </div>
-//     );
-// }

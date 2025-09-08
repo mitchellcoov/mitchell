@@ -1,0 +1,28 @@
+{
+    "projects": [
+        {
+            "slug": "sap-help-portal",
+            "title": "SAP Help Portal",
+            "description": "The website hosting all of the technical documentation for SAP's extensive catalogue of products.",
+            "image": "/projects/sap-help-portal/hp_home.png"
+        },
+        {
+            "slug": "ontario-finances",
+            "title": "Ontario Finances",
+            "description": "A website that helps to visualize the province of Ontario's fiscal history.",
+            "image": "/projects/ontario-finances/e1.png"
+        },
+        {
+            "slug": "this-site",
+            "title": "This Site",
+            "description": "The site you are currently visiting.",
+            "image": "/projects/this-site/mitchell_home.png"
+        },
+        {
+            "slug": "school-projects",
+            "title": "School Projects",
+            "description": "A few projects from when I was a student at McMaster.",
+            "image": ""
+        }
+    ]
+}

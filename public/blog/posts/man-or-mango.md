@@ -1,1 +1,0 @@
-To start off, I don't think this book is everyone's cup of tea but it is very much mine. It's kind of like, if a Wes Anderson film were a novel with .

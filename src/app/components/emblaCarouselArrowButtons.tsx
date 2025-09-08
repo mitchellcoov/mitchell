@@ -58,7 +58,7 @@ import React, {
   
     return (
       <button
-        className="embla__button"
+        className="embla__button prev"
         type="button"
         {...restProps}
       >
@@ -78,7 +78,7 @@ import React, {
   
     return (
       <button
-        className="embla__button"
+        className="embla__button next"
         type="button"
         {...restProps}
       >
