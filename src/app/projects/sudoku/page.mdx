@@ -1,0 +1,50 @@
+import ClickableImage from '@/app/components/ClickableImage';
+import Title from "@/app/components/Title";
+
+<div className="project">
+    <Title text={`Sudoku.`} />
+
+    <article className="text-center">
+        <a class="project-link" href="https://sudoku.coovert.ca" target="_blank">https://sudoku.coovert.ca</a>
+
+        <br/>
+        <br/>
+        <span className="logo-span">
+            <a className="tech-logo" href="https://react.dev" target="_blank">
+                <img className="hidden dark:block" src="/logos/dark_react_native_icon.png" alt="React logo" width="60" />
+                <img className="dark:hidden block" src="/logos/light_react_native_icon.png" alt="React logo" width="60" />
+            </a>
+            <a className="tech-logo" href="https://www.typescriptlang.org" target="_blank">
+                <img className="hidden dark:block" src="/logos/dark_typescript_icon.png" alt="Typescript logo" width="60" />
+                <img className="dark:hidden block" src="/logos/light_typescript_icon.png" alt="Typescript logo" width="60" />
+            </a>
+            <a className="tech-logo" href="https://tailwindcss.com" target="_blank">
+                <img className="hidden dark:block" src="/logos/dark_tailwind_css_icon.png" alt="Tailwind CSS logo" width="60" />
+                <img className="dark:hidden block" src="/logos/light_tailwind_css_icon.png" alt="Tailwind CSS logo" width="60" />
+            </a>
+            <a className="tech-logo" href="https://vite.dev/" target="_blank">
+                <img className="hidden dark:block" src="/logos/dark_vite_icon.png" alt="Vite logo" width="60" />
+                <img className="dark:hidden block" src="/logos/light_vite_icon.png" alt="Vite logo" width="60" />
+            </a>
+        </span>
+
+        <br/>
+        <br/>
+        <br/>
+        
+        I have always enjoyed doing puzzles and one of my favourites has always been Sudoku. If you've looked at my other projects you might have seen that I've made a Sudoku game before for a <a href="mcmaster-projects">school project</a> while I was in university. I&apos;ve always wanted to revisit and improve on it. Though this new version still isn't perfect, it is a huge improvement over the original. This version is a web application written with TypeScript and React, instead of a Java application. 
+
+        <ClickableImage className="project-picture" src="/projects/sudoku/game_board.png" alt="The SAP Help Portal homepage" width={400}/>
+
+        The game board is generated randomly each game. It first goes through and generates the full board. It will then recursively eliminate one square at a time and use backtracking to solve the board and ensure that there is only a single solution. To learn more about the algorithm used please see backtracking on this <a href="https://en.wikipedia.org/wiki/Sudoku_solving_algorithms" target="_blank">Wikipedia page</a>. It will also keep track of moves allowing the player to undo. 
+
+        The game allows users to select the level of difficulty they would like to play. The random generation does make it difficult to judge a game's difficulty because the types of moves required to solve are unknown. So difficulty is adjusted by the number of tiles eliminated. The alternative would be to store a set of known puzzles with their difficulties but I found the solving algorithm to be a more interesting project than using pregenerated boards.
+
+        <ClickableImage className="project-picture" src="/projects/sudoku/game_board-mobile.png" alt="The SAP Help Portal homepage" width={250}/>
+
+        This might be the project I'm most proud of from a design/aesthetic point of view. I wanted to keep the look simple and light, and not crowd the page. I think the colour palette could be improved a bit but for now it's good.
+
+        For the future, I think adding a hint button and different types of boards would be interesting but we'll see. 
+
+    </article>
+</div>

@@ -2,8 +2,6 @@
 import Title from "@/app/components/Title";
 import BlogPostTypeComponent from "@/app/components/blog/BlogPostType";
 
-import Markdown from "react-markdown";
-import rehypeRaw from 'rehype-raw'
 import { useEffect, useState } from "react";
 import { notFound } from "next/navigation";
 
@@ -69,9 +67,10 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                     <h4 className="" >{meta.timestamp}</h4>
                 </div>
             </section>
-            <section className="text-xl gap-4 flex flex-col">
+            {content}
+            {/* <section className="text-xl gap-4 flex flex-col">
                 <Markdown children={content} rehypePlugins={[rehypeRaw]}/>
-            </section>
+            </section> */}
         </div>
     );
 }

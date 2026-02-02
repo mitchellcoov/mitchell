@@ -60,16 +60,16 @@ export default function Home() {
                 </p>
 
                 <p className="paragraph">
-                    I also have significant experience in DevOps. I've created and managed pipelines in Jenkins, and GitHub Actions. 
-                    Administrated and optimized databases such as Elasticsearch, and SAP's S4/HANA. And so with that, I have been on a little 
+                    I also have significant experience in DevOps. I&apos;ve created and managed pipelines in Jenkins, and GitHub Actions. 
+                    Administrated and optimized databases such as Elasticsearch, and SAP&apos;s S4/HANA. And so with that, I have been on a little 
                     bit of a quest as of late, to improve and round out my overall full-stack knowledge, getting to know and diving deeper 
                     into React, NextJS, TailwindCSS, Vite, Node, and Svelte.
                 </p>
 
                 <p className="paragraph">
-                    I attended McMaster University in Hamilton, Ontario for software engineering. McMaster is one of the few universities 
-                    that has a general engineering first year. You're required to take courses from a variety of different engineering 
-                    disciplines. And that's when I first found programming and fell in love. I initially planned on becoming a chemical 
+                    I attended McMaster University in Hamilton, Ontario for software engineering. McMaster is one of the few universities in Ontario
+                    that has a general engineering first year. You&apos;re required to take courses from a variety of different engineering 
+                    disciplines. One of the classes was an introduction to Python and thatapos;s when I first found programming. I initially planned on becoming a chemical 
                     engineer but software development is a much better fit for me. It allows me to fulfill my need for solving logic and 
                     math based problems and puzzles but also to be creative designing user interfaces. Unfortunately, I have yet to finish 
                     my degree. I do plan on finishing it eventually but for now I am attending St. Clair College in pursuit of a diploma in 

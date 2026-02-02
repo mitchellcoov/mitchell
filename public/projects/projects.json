@@ -7,6 +7,12 @@
             "image": "/projects/sap-help-portal/hp_home.png"
         },
         {
+            "slug": "sudoku",
+            "title": "Sudoku",
+            "description": "A web site to play the popular game sudoku",
+            "image": "/projects/sudoku/game_board.png"
+        },
+        {
             "slug": "ontario-finances",
             "title": "Ontario Finances",
             "description": "A website that helps to visualize the province of Ontario's fiscal history.",
@@ -19,8 +25,8 @@
             "image": "/projects/this-site/mitchell_home.png"
         },
         {
-            "slug": "school-projects",
-            "title": "School Projects",
+            "slug": "mcmaster-projects",
+            "title": "McMaster Projects",
             "description": "A few projects from when I was a student at McMaster.",
             "image": ""
         }

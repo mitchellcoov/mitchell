@@ -7,7 +7,6 @@ import {
     usePrevNextButtons
 } from './emblaCarouselArrowButtons'
 import useEmblaCarousel from 'embla-carousel-react'
-import Image from 'next/image';
 import ClickableImage from './ClickableImage';
 
 export interface ImageDetails {
